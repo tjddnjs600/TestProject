@@ -1,3 +1,5 @@
+package com.example.firstday;
+
 public class Voca {
     private String kor;
     private String eng;

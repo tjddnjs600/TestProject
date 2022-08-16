@@ -1,6 +1,7 @@
 package com.example.firstday;
 
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.os.Bundle;
 
 public class WordGameActivity extends AppCompatActivity {

@@ -1,4 +1,4 @@
-package com.example.calendar;
+package com.example.calendarlist;
 
 import androidx.appcompat.app.AppCompatActivity;
 

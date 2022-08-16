@@ -1,18 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    >
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <RelativeLayout
+        android:id="@+id/topLayout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:id="@+id/monthTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="4월"
+            android:textStyle="bold"
+            android:textSize="30dp"
+            android:textColor="#D5D5D5"/>
+
+        <Button
+            android:id="@+id/monthBtn"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/triangle_left_img"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="30dp"
+            android:layout_toLeftOf="@id/monthTv"/>
+
+        <Button
+            android:id="@+id/nextMonthBtn"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/triangle_right_img"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="30dp"
+            android:layout_toRightOf="@id/monthTv"/>
+
+
+    </RelativeLayout>
+
+    <GridView
+        android:id="@+id/calendarGv"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:numColumns="7"
+        android:horizontalSpacing="1dp"
+        android:layout_below="@id/topLayout"/>
+
+    <ListView
+        android:id="@+id/lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/calendarGv"
+        android:layout_above="@id/bottonLay"
+        android:textSize="20dp"/>
+
+    <RelativeLayout
+        android:id="@+id/bottonLay"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

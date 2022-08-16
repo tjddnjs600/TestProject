@@ -1,9 +1,104 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".saveActivity">
+<?xml version="1.0" encoding="UTF-8"?>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+<RelativeLayout
+    tools:context=".SaveActivity"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textSize="35sp"
+        android:text="입력 모드"
+        android:layout_marginTop="8dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/modeTv"/>
+
+
+    <RelativeLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:id="@+id/addLayout"
+        android:visibility="visible"
+        android:layout_below="@+id/swapBt">
+
+        <Button
+            android:id="@+id/addBt"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_alignTop="@+id/engEt"
+            android:layout_alignBottom="@+id/korEt"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="100dp"
+            android:minWidth="80dp"
+            android:text="추가"
+            android:textColor="#ffffff"
+            android:textSize="40sp"/>
+
+        <Button
+            android:id="@+id/schBt"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_alignTop="@+id/engEt"
+            android:layout_alignBottom="@+id/korEt"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="93dp"
+            android:layout_marginRight="7dp"
+            android:layout_marginBottom="7dp"
+            android:minWidth="80dp"
+            android:text="검색"
+            android:textColor="#ffffff"
+            android:textSize="40sp" />
+
+        <EditText
+            android:layout_height="80dp"
+            android:layout_width="match_parent"
+            android:textSize="40sp"
+            android:id="@+id/engEt"
+            android:maxLines="1"
+            android:inputType="text"
+            android:hint="영어"
+            android:layout_toLeftOf="@+id/addBt"
+            android:layout_margin="15dp"/>
+
+        <EditText
+            android:layout_height="80dp"
+            android:layout_width="match_parent"
+            android:textSize="40sp"
+            android:id="@+id/korEt"
+            android:layout_below="@+id/engEt"
+            android:maxLines="1"
+            android:inputType="text"
+            android:hint="한글"
+            android:layout_alignRight="@+id/engEt"
+            android:layout_alignLeft="@+id/engEt"/>
+
+        <EditText
+            android:layout_height="80dp"
+            android:layout_width="match_parent"
+            android:textSize="40sp"
+            android:id="@+id/schEt"
+            android:maxLines="1"
+            android:inputType="text"
+            android:hint="검색"
+            android:layout_toLeftOf="@+id/addBt"
+            android:layout_margin="15dp"
+            android:visibility="invisible"/>
+
+        <ListView
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:id="@+id/centerLv"
+            android:layout_below="@+id/korEt"
+            android:minWidth="80dp"
+            android:layout_margin="15dp"
+            android:padding="10dp"
+            android:minHeight="40dp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

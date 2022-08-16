@@ -1,9 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SwapActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <RadioGroup
+        android:id="@+id/btnGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="60dp">
+
+        <RadioButton
+            android:id="@+id/koSwap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:text="한글 문제"
+            android:textSize="30dp"/>
+
+        <RadioButton
+            android:id="@+id/enSwap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="영어 문제"
+            android:textSize="30dp"/>
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"
+        android:text="변경하실 모드를 선택해 주세요"
+        android:textSize="30dp"/>
+
+    <Button
+        android:id="@+id/chkBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnGroup"
+        android:layout_marginLeft="160dp"
+        android:text="확인"
+        android:textSize="30dp"/>
+
+</RelativeLayout>
